@@ -1,0 +1,18 @@
+[Unit]
+Description=pm2_mongo_restart_service
+After=network.target
+
+[Service]
+ExecStart=sudo sh /root/custom_service_for_live_server/pm2_mongo_restart_service/pm2_mongo_restart_service.sh
+WorkingDirectory=/root/custom_service_for_live_server/pm2_mongo_restart_service
+StandardOutput=append:/var/log/pm2_mongo_restart_service.log
+StandardError=append:/var/log/pm2_mongo_restart_service.log
+SyslogIdentifier=pm2_mongo_restart_service
+RestartSec=20
+Restart=always
+User=root
+Environment=PYTHONUNBUFFERED=1
+
+
+[Install]
+WantedBy=multi-user.target
