@@ -1,4 +1,4 @@
 {
     "name": "pm2_mongo_restart_service",
-    "command_to_run_file":"sudo sh /root/custom_service_for_live_server/pm2_mongo_restart_service/pm2_mongo_restart_service.sh"
+    "command_to_run_file":"sudo bash /root/utility_services/pm2_mongo_restart_service/pm2_mongo_restart_service.sh"
 }
